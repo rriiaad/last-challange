@@ -1,0 +1,28 @@
+.img-title {
+  border: 3px solid var(--title);
+}
+
+.img-title p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  color: var(--text);
+}
+
+.artiste {
+  font-size: 12px;
+  font-weight: light;
+  color: var(--text);
+}
+
+.hovered {
+  background-color: var(--text);
+  border: 3px solid var(--title);
+  transition: 0.3s;
+}
+
+.hovered p {
+  color: var(--title);
+  transition: 0.3s;
+}

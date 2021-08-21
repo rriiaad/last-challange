@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  transition: ease-out 0.3s;
+
+  --text: white;
+  --title: rgb(41, 40, 40);
+  --h1: rgb(31, 30, 30);
+}
+
+.dark-mode {
+  --title: rgb(22, 21, 31);
+  --text: rgb(217, 217, 223);
+  --h1: rgb(245, 235, 235);
+}
+
+header {
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1 {
+  color: var(--h1);
+}
+
+main {
+  flex-grow: 1;
+  margin: 10px;
+  display: grid;
+  gap: 40px;
+  padding-bottom: 50px;
+  grid-template-columns: repeat(4, 20vw);
+  justify-content: center;
+}
+
+img {
+  width: 20vw;
+  top: 0;
+  cursor: pointer;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-title {
+  width: 18vw;
+  height: 55px;
+  border-radius: 30px;
+  background-color: var(--title);
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+.line1 {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.line2 {
+  object-fit: cover;
+  height: 25vh;
+}
+
+.line3 {
+  object-fit: cover;
+  height: 30vh;
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  img {
+    width: 40vw;
+  }
+  .img-title {
+    width: 35vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    grid-template-columns: repeat(1, 20vw);
+  }
+  img {
+    width: 80vw;
+  }
+  .img-title {
+    width: 75vw;
+  }
+}
+
+.button {
+  width: 70px;
+  height: 30px;
+  background-color: #000000;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.ball {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: 0.2s;
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  top: 0px;
+  left: 40px;
+}
+
+i {
+  font-size: 20px;
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  opacity: 0;
+}
+
+.dark-mode {
+  background-color: rgb(46, 45, 45);
+  transition: ease-out 0.4s;
+}
+
+.dark-mode .ball {
+  transform: translateX(40px);
+  transition: 0.4s;
+  background-color: black;
+}
+
+.dark-mode .button {
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+.dark-mode .moon {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.dark-mode i {
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.button-container {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
